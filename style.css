@@ -91,20 +91,18 @@ body{
 
 /**--Awal pages--**/
 #label-page{
-	margin-top:6px;
-	margin-bottom:6px;
-	margin-left:6px;
+	margin:6px;
 	border:2px solid #C4C4C4;
 	padding:4px;
-	width:97.9%;
+	width:100%;
 }
 #content{
 	float:left;
-	width:96.8%;
+	width:100%;
 	min-height:454px;
 	border:2px solid #C4C4C4;
 	padding:10px;
-	margin-bottom:6px;
+	margin: 6px;
 }
 #beranda-judul{
 	text-align:center;

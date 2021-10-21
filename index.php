@@ -76,7 +76,7 @@ $tgl = date('Y-m-d');
       </div>
     </div>
   </div>
-
+  
   <footer class="fixed-bottom" style="background-color: #3D56B2; color: #fff;">
     <div class="container-fluid">
       <h6 class="mt-2" style="text-align: center;">Rental Pakaian Telyu</h6>
