@@ -6,7 +6,7 @@ $tgl = date('Y-m-d');
 <html>
 
 <head>
-  <title>Sistem Informasi Perpustakaan</title>
+  <title>Rental Pakaian Bojongsoang</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -36,8 +36,8 @@ $tgl = date('Y-m-d');
         <img src="images/logo.png" alt="logo" height="60px">
       </div>
       <div style="color: #fff; text-align: right;">
-        <h2 style="font-weight: 600;">PERPUSTAKAAN UMUM</h2>
-        <h6>Jl. Lembah Abang No 11, Telp: (021)55555555</h6>
+        <h2 style="font-weight: 600;">Rental Pakaian Telyu</h2>
+        <h6>Jl. Telekomunikasi No. 1, Terusan Buahbatu - Bojongsoang</h6>
       </div>
     </div>
   </nav>
@@ -53,7 +53,7 @@ $tgl = date('Y-m-d');
           <a class="mt-3" href="index.php?p=beranda">Beranda</a>
           <p class="label-navigasi mb-0">Entry Data Dan Transaksi</p>
           <a href="index.php?p=anggota">Data Anggota</a>
-          <a href="index.php?p=buku">Data Buku</a>
+          <a href="index.php?p=buku">Data Pakaian</a>
           <a href="index.php?p=transaksi-peminjaman">Transaksi Peminjaman</a>
         </div>
       </div>
@@ -79,7 +79,7 @@ $tgl = date('Y-m-d');
 
   <footer class="fixed-bottom" style="background-color: #3D56B2; color: #fff;">
     <div class="container-fluid">
-      <h6 class="mt-2" style="text-align: center;">Sistem Informasi Perpustakaan (sipus) | Praktikum </h6>
+      <h6 class="mt-2" style="text-align: center;">Rental Pakaian Telyu</h6>
     </div>
   </footer>
 

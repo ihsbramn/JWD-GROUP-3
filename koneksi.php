@@ -3,7 +3,7 @@
 $server = "127.0.0.1";
 $user = "root";
 $password = "";
-$nama_database = "dbpus";
+$nama_database = "dbrental";
 
 $db = mysqli_connect($server, $user, $password, $nama_database);
 
