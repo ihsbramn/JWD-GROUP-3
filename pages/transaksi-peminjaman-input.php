@@ -44,10 +44,10 @@ $kode++;
             <?php
 						$q_tampil_pakaian=mysqli_query($db,
 							"SELECT * FROM tb_jenis_pakaian
-							ORDER BY nama"
+							ORDER BY nama_pakaian"
 						);
 						while($r_tampil_pakaian=mysqli_fetch_array($q_tampil_pakaian)){
-							echo"<option value=$r_tampil_pakaian[idpakaian]>$r_tampil_pakaian[idpakaian] | $r_tampil_buku[nama_pakaian]</option>";
+							echo"<option value=$r_tampil_pakaian[idpakaian]>$r_tampil_pakaian[idpakaian] | $r_tampil_pakaian[nama_pakaian]</option>";
 						}
 					?>
           </select>
