@@ -1,10 +1,10 @@
 <?php
 include'../koneksi.php';
-$id_buku=$_GET['id'];
+$idpakaian=$_GET['id'];
 
 mysqli_query($db,
-	"DELETE FROM tbbuku
-	WHERE idbuku='$id_buku'"
+	"DELETE FROM tb_jenis_pakaian
+	WHERE idpakaian='$idpakaian'"
 );
 header("location:../index.php?p=buku");
 ?>
