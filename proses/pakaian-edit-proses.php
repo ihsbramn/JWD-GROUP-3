@@ -1,17 +1,16 @@
 <?php
 include'../koneksi.php';
 
-$id_buku=$_POST['id_buku'];
-$judul_buku=$_POST['judul_buku'];
-$kategori=$_POST['kategori'];
-$pengarang=$_POST['pengarang'];
-$penerbit=$_POST['penerbit'];
+$id_pakaian=$_POST['idpakaian'];
+$nama_pakaian=$_POST['nama'];
+$merk=$_POST['merk'];
+$ukuran=$_POST['ukuran'];
 
 If(isset($_POST['simpan'])){
-	mysqli_query($sql,
-		"UPDATE tbbuku
-		SET judulbuku='$judul_buku',kategori='$kategori',pengarang='$pengarang',penerbit='$penerbit'
-		WHERE idbuku='$id_buku'"
+	mysqli_query($db,
+		"UPDATE tb_jenis_pakaian
+		SET nama_pakaian='$nama_pakaian',merk='$merk',ukuran='$ukuran'
+		WHERE idpakaian='$id_pakaian'"
 	);
 	header("location:../index.php?p=buku");
 }

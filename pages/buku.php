@@ -23,10 +23,10 @@
     <tr>
       <td><?php echo $nomor++; ?></td>
       <td><?php echo $r_tampil_pakaian['idpakaian']; ?></td>
-      <td><?php echo $r_tampil_pakaian['nama']; ?></td>
+      <td><?php echo $r_tampil_pakaian['nama_pakaian']; ?></td>
       <td><?php echo $r_tampil_pakaian['merk']; ?></td>
       <td><?php echo $r_tampil_pakaian['ukuran']; ?></td>
-      <td>
+      <td class="d-flex gap-2">
         <div class="tombol-opsi-container"><a href="index.php?p=pakaian-edit&id=<?php echo $r_tampil_pakaian['idpakaian'];?>"
             class="tombol">Edit</a></div>
         <div class="tombol-opsi-container"><a href="proses/pakaian-hapus.php?id=<?php echo $r_tampil_pakaian['idpakaian']; ?>"

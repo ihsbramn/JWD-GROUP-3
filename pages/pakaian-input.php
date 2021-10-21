@@ -1,21 +1,8 @@
-<?php
-$sql = "SELECT count(*) as total from tb_jenis_pakaian";
-$a = mysqli_query($db, $sql);
-$data = mysqli_fetch_array($a);
-$num = str_pad($data['total'] + 1, 3, "0", STR_PAD_LEFT);
-$id = 'PK' . $num;
-?>
 <div id="label-page">
   <h3>Input Data Pakaian</h3>
 </div>
 <div id="content">
-  <form action="proses/buku-input-proses.php" method="post" id="form">
-    <div class="mb-3 row d-flex justify-content-center">
-        <label for="nama" class="col-sm-2 col-form-label">ID Pakaian</label>
-        <div class="col-sm-10">
-            <input type="text" name="idpakaian" value="<?=$id?>" class="isian-formulir form-control" readonly>
-        </div>
-    </div>
+  <form action="proses/pakaian-input-proses.php" method="post" id="form">
     <div class="mb-3 row d-flex justify-content-center">
       <label for="nama" class="col-sm-2 col-form-label">Nama</label>
       <div class="col-sm-10">
@@ -31,13 +18,24 @@ $id = 'PK' . $num;
     <div class="mb-3 row d-flex justify-content-center">
       <label for="nama" class="col-sm-2 col-form-label">Ukuran</label>
       <div class="col-sm-10">
-        <input type="number" name="ukuran" id="ukuran" class="isian-formulir form-control" required>
+        <select class="form-select" name="ukuran" id="ukuran"  aria-label="Default select example">
+          <option selected>-- Pilih Ukuran --</option>
+          <option value="XS">XS</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="xXL">xXL</option>
+        </select>
       </div>
     </div>
-    
-    <div class="mb-3 d-flex justify-content-end">
+
+    <div class="mb-3 row d-flex justify-content-center">
+      <label for="alamat" class="col-sm-2 col-form-label"></label>
+      <div class="col-sm-10">
         <input name="simpan" value="Simpan" class="tombol" onclick="validasi()" readonly
-          style="cursor: pointer; width: 55px;">
+          style="cursor: pointer; width: 60px;">
+      </div>
     </div>
   </form>
 
