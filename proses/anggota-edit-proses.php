@@ -1,9 +1,9 @@
 <?php
 include '../koneksi.php';
 
-$idanggota=$_POST['idanggota'];
+$idanggota=$_POST['id_anggota'];
 $nama=$_POST['name'];
-$jeniskelamin=$_POST['jeniskelamin'];
+$jeniskelamin=$_POST['jenis_kelamin'];
 $alamat=$_POST['alamat'];
 
 if(isset($_POST['simpan'])){
