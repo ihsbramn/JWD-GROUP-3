@@ -54,7 +54,7 @@ $tgl = date('Y-m-d');
           <a class="mt-3" href="index.php?p=beranda">Beranda</a>
           <p class="label-navigasi mb-0">Entry Data Dan Transaksi</p>
           <a href="index.php?p=anggota">Data Anggota</a>
-          <a href="index.php?p=buku">Data Pakaian</a>
+          <a href="index.php?p=pakaian">Data Pakaian</a>
           <a href="index.php?p=transaksi-peminjaman">Transaksi Peminjaman</a>
         </div>
       </div>

@@ -9,6 +9,6 @@ if(isset($_POST['simpan'])){
 		VALUES('', '$nama','$merk','$ukuran')";
 	$query = mysqli_query($db, $sql);
 	
-	header("location:../index.php?p=buku");
+	header("location:../index.php?p=pakaian");
 }
 ?>

@@ -12,6 +12,6 @@ If(isset($_POST['simpan'])){
 		SET nama_pakaian='$nama_pakaian',merk='$merk',ukuran='$ukuran'
 		WHERE idpakaian='$id_pakaian'"
 	);
-	header("location:../index.php?p=buku");
+	header("location:../index.php?p=pakaian");
 }
 ?>

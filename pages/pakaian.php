@@ -23,7 +23,7 @@
     <tr>
       <td><?php echo $nomor++; ?></td>
       <td><?php echo $r_tampil_pakaian['idpakaian']; ?></td>
-      <td><?php echo $r_tampil_pakaian['nama_pakaian']; ?></td>
+      <td><?php echo $r_tampil_pakaian['nama']; ?></td>
       <td><?php echo $r_tampil_pakaian['merk']; ?></td>
       <td><?php echo $r_tampil_pakaian['ukuran']; ?></td>
       <td class="d-flex gap-2">

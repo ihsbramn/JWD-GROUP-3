@@ -37,17 +37,17 @@ $kode++;
         </td>
       </tr>
       <tr>
-        <td class="label-formulir">Buku</td>
+        <td class="label-formulir">Pakaian</td>
         <td class="isian-formulir">
-          <select name="id_buku" id="buku" class="isian-formulir isian-formulir-border">
-            <option value="" selected disabled> Pilih Data Buku </option>
+          <select name="idpakaian" id="pakaian" class="isian-formulir isian-formulir-border">
+            <option value="" selected disabled> Pilih Data Pakaian </option>
             <?php
-						$q_tampil_buku=mysqli_query($db,
+						$q_tampil_pakaian=mysqli_query($db,
 							"SELECT * FROM tb_jenis_pakaian
-							ORDER BY idpakaian"
+							ORDER BY nama"
 						);
-						while($r_tampil_buku=mysqli_fetch_array($q_tampil_buku)){
-							echo"<option value=$r_tampil_buku[idpakaian]>$r_tampil_buku[idpakaian] | $r_tampil_buku[nama_pakaian]</option>";
+						while($r_tampil_pakaian=mysqli_fetch_array($q_tampil_pakaian)){
+							echo"<option value=$r_tampil_pakaian[idpakaian]>$r_tampil_pakaian[idpakaian] | $r_tampil_buku[nama_pakaian]</option>";
 						}
 					?>
           </select>
