@@ -12,7 +12,7 @@
       <th>ID Pakaian</th>
       <th>Nama Pakaian</th>
       <th>Tanggal Pinjam</th>
-      <th style="width: 250px;">Opsi</th>
+      <th style="width: 150px;">Opsi</th>
     </tr>
     <?php
 
@@ -35,10 +35,7 @@
       <td><?php echo $r_transaksi['idpakaian']; ?></td>
       <td><?php echo $r_transaksi['nama_pakaian']; ?></td>
       <td><?php echo $r_transaksi['tglpinjam']; ?></td>
-      <td class="d-flex gap-2">
-        <div class="tombol-opsi-container"><a
-            href="cetak/nota-peminjaman.php?&id=<?php echo $r_transaksi['idtransaksi'];?>" target="_blank"
-            class="tombol">Cetak Nota</a></div>
+      <td>
         <div class="tombol-opsi-container"><a
             href="proses/pengembalian-proses.php?&id=<?php echo $r_transaksi['idtransaksi'];?>"
             onclick="return confirm('Apakah yakin baju telah dikembalikan?');" class="tombol">Pengembalian</a></div>

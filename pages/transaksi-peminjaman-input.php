@@ -44,10 +44,10 @@ $kode++;
             <?php
 						$q_tampil_pakaian=mysqli_query($db,
 							"SELECT * FROM tb_jenis_pakaian
-							ORDER BY nama"
+							ORDER BY idpakaian"
 						);
 						while($r_tampil_pakaian=mysqli_fetch_array($q_tampil_pakaian)){
-							echo"<option value=$r_tampil_pakaian[idpakaian]>$r_tampil_pakaian[idpakaian] | $r_tampil_buku[nama_pakaian]</option>";
+							echo"<option value=$r_tampil_pakaian[idpakaian]>$r_tampil_pakaian[idpakaian] | $r_tampil_pakaian[nama_pakaian]</option>";
 						}
 					?>
           </select>
@@ -69,13 +69,13 @@ $kode++;
   <script>
   function validasi() {
     anggota = document.getElementById('anggota').value;
-    buku = document.getElementById('buku').value;
+    pakaian = document.getElementById('pakaian').value;
 
     if (anggota == '') {
       alert('Silahkan pilih anggota');
       return false;
-    } else if (buku == '') {
-      alert('Silahkan pilih buku');
+    } else if (pakaian == '') {
+      alert('Silahkan pilih pakaian');
       return false;
     } else {
 			document.getElementById('form').submit();
