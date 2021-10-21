@@ -21,34 +21,35 @@ $tgl = date('Y-m-d');
     padding: .3rem .5rem;
     text-decoration: none;
     font-weight: 500;
+    color: #9D9D9D;
   }
   .sidebar a:hover {
-    background-color: #04009A;
+    background-color: #9D9D9D;
     color: #fff;
   }
   </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-light" style="background-color: #3D56B2;">
+  <nav class="navbar navbar-light" style="background-color: #79B4B7;">
     <div class="container-fluid">
       <div>
         <img src="images/logo.png" alt="logo" height="60px">
       </div>
-      <div style="color: #fff; text-align: right;">
+      <div style="color: #000; text-align: right;">
         <h2 style="font-weight: 600;">Rental Pakaian Telyu</h2>
         <h6>Jl. Telekomunikasi No. 1, Terusan Buahbatu - Bojongsoang</h6>
       </div>
     </div>
   </nav>
 
-  <div class="container-flluid" style="background-color: #04009A;">
-    <div class="ms-3 pt-2 pb-2" style="color: #fff;">Hai Admin !</div>
+  <div class="container-flluid" style="background-color: #9D9D9D;">
+    <div class="ms-3 pt-2 pb-2" style="color: #000;">Hai Admin !</div>
   </div>
 
   <div class="container-fluid">
     <div class="row" style="min-height: calc(100vh - 160.25px);">
-      <div class="col" style="max-width: 250px; background-color: #d7e0ff;">
+      <div class="col" style="max-width: 250px; background-color: #F8F0DF;">
         <div class="sidebar">
           <a class="mt-3" href="index.php?p=beranda">Beranda</a>
           <p class="label-navigasi mb-0">Entry Data Dan Transaksi</p>
@@ -76,8 +77,8 @@ $tgl = date('Y-m-d');
       </div>
     </div>
   </div>
-  
-  <footer class="fixed-bottom" style="background-color: #3D56B2; color: #fff;">
+
+  <footer class="fixed-bottom" style="background-color: #79B4B7; color: #fff;">
     <div class="container-fluid">
       <h6 class="mt-2" style="text-align: center;">Rental Pakaian Telyu</h6>
     </div>

@@ -1,21 +1,9 @@
-<?php
-$sql="SELECT * FROM tb_anggota";
-$a = mysqli_query($db, $sql);
-$num = str_pad(count(mysqli_fetch_array($a)), 3, "0", STR_PAD_LEFT);
-$id = 'AG' . $num;
-?>
 <div id="label-page">
   <h3>Input Data Anggota</h3>
 </div>
 <div id="content">
   <form action="proses/anggota-input-proses.php" method="post" id="form">
     <table id="tabel-input">
-      <tr>
-        <td class="label-formulir">ID Anggota</td>
-        <td class="isian-formulir"><input type="text" name="idanggota" class="isian-formulir isian-formulir-border"
-            value="<?= $id ?>" readonly>
-        </td>
-      </tr>
       <tr>
         <td class="label-formulir">Nama</td>
         <td class="isian-formulir"><input type="text" name="nama" class="isian-formulir isian-formulir-border"
@@ -39,7 +27,7 @@ $id = 'AG' . $num;
       <tr>
         <td class="label-formulir"></td>
         <td class="isian-formulir"><input name="simpan" value="Simpan" class="tombol" onclick="validasi()" readonly
-            style="cursor: pointer; width: 55px;"></td>
+            style="cursor: pointer; width: 60px;"></td>
       </tr>
     </table>
   </form>
