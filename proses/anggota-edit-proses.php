@@ -1,16 +1,16 @@
 <?php
 include '../koneksi.php';
 
-$id_anggota=$_POST['id_anggota'];
+$idanggota=$_POST['idanggota'];
 $nama=$_POST['name'];
-$jenis_kelamin=$_POST['jenis_kelamin'];
+$jeniskelamin=$_POST['jeniskelamin'];
 $alamat=$_POST['alamat'];
 
 if(isset($_POST['simpan'])){
 	mysqli_query($db,
-		"UPDATE tbanggota
-		SET nama='$nama',jeniskelamin='$jenis_kelamin',alamat='$alamat'
-		WHERE idanggota='$id_anggota'"
+		"UPDATE tb_anggota
+		SET nama='$nama',jeniskelamin='$jeniskelamin',alamat='$alamat'
+		WHERE idanggota='$idanggota'"
 	);
 	header("location:../index.php?p=anggota");
 }

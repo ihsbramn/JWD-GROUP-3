@@ -1,5 +1,5 @@
 <?php
-$sql="SELECT * FROM tbanggota";
+$sql="SELECT * FROM tb_anggota";
 $a = mysqli_query($db, $sql);
 $num = str_pad(count(mysqli_fetch_array($a)), 3, "0", STR_PAD_LEFT);
 $id = 'AG' . $num;
@@ -12,7 +12,7 @@ $id = 'AG' . $num;
     <table id="tabel-input">
       <tr>
         <td class="label-formulir">ID Anggota</td>
-        <td class="isian-formulir"><input type="text" name="id_anggota" class="isian-formulir isian-formulir-border"
+        <td class="isian-formulir"><input type="text" name="idanggota" class="isian-formulir isian-formulir-border"
             value="<?= $id ?>" readonly>
         </td>
       </tr>
@@ -24,7 +24,7 @@ $id = 'AG' . $num;
       <tr>
         <td class="label-formulir">Jenis Kelamin</td>
         <td class="isian-formulir">
-          <select name="jenis_kelamin" id="jeniskelamin" class="isian-formulir isian-formulir-border">
+          <select name="jeniskelamin" id="jeniskelamin" class="isian-formulir isian-formulir-border">
             <option value="" selected disabled>-- Pilih --</option>
             <option value="Pria">Pria</option>
             <option value="Wanita">Wanita</option>

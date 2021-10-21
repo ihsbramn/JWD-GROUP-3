@@ -1,6 +1,6 @@
 <?php
 	$id_anggota=$_GET['id'];
-	$q_tampil_anggota=mysqli_query($db,"SELECT * FROM tbanggota WHERE idanggota='$id_anggota'");
+	$q_tampil_anggota=mysqli_query($db,"SELECT * FROM tb_anggota WHERE idanggota='$id_anggota'");
 	$r_tampil_anggota=mysqli_fetch_array($q_tampil_anggota);
 ?>
 <div id="label-page">

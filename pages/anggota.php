@@ -10,13 +10,13 @@
       <th>Nama</th>
       <th>Jenis Kelamin</th>
       <th>Alamat</th>
-      <th id="label-opsi">Opsi</th>
-    </tr>
+      <th>Action</th>
+      </tr>
 
 
 
     <?php
-		$sql="SELECT * FROM tbanggota ORDER BY idanggota DESC";
+		$sql="SELECT * FROM tb_anggota ORDER BY idanggota DESC";
 		$q_tampil_anggota = mysqli_query($db, $sql);
 		$nomor=1;
 		while($r_tampil_anggota=mysqli_fetch_array($q_tampil_anggota)){

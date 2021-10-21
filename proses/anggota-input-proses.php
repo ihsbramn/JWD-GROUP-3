@@ -1,16 +1,15 @@
 <?php
 include'../koneksi.php';
-$id_anggota=$_POST['id_anggota'];
+$idanggota=$_POST['idanggota'];
 $nama=$_POST['nama'];
-$jenis_kelamin=$_POST['jenis_kelamin'];
+$jeniskelamin=$_POST['jeniskelamin'];
 $alamat=$_POST['alamat'];
-$status="Tidak Meminjam";
 	
 if(isset($_POST['simpan'])){
 
 	$sql = 
-	"INSERT INTO tbanggota
-		VALUES('$id_anggota','$nama','$jenis_kelamin','$alamat','$status')";
+	"INSERT INTO tb_anggota
+		VALUES('$idanggota','$nama','$jeniskelamin','$alamat')";
 	$query = mysqli_query($db, $sql);
 
 	header("location:../index.php?p=anggota");
