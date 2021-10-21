@@ -10,17 +10,16 @@ $status_buku="Dipinjam";
 
 if(isset($_POST['simpan'])){
 	mysqli_query($db,
-		"INSERT INTO tbtransaksi
+		"INSERT INTO tb_transaksi
 		VALUES('$id_transaksi','$id_anggota','$id_buku','$tgl_pinjam','')"
 	);
 	mysqli_query($db,
-		"UPDATE tbanggota
+		"UPDATE tb_anggota
 		SET status='$status_anggota'
 		WHERE idanggota='$id_anggota'"
 	);
 	mysqli_query($db,
-		"UPDATE tbbuku
-		SET status='$status_buku'
+		"UPDATE tb_jenis_pakaian
 		WHERE idbuku='$id_buku'"
 	);
 	header("location:../index.php?p=transaksi-peminjaman");

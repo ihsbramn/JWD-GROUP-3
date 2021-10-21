@@ -1,9 +1,10 @@
 <?php
-$sql = "SELECT count(*) as total from tbtransaksi";
-$a = mysqli_query($db, $sql);
-$data = mysqli_fetch_array($a);
-$num = str_pad($data['total'] + 1, 3, "0", STR_PAD_LEFT);
-$id = 'TR' . $num;
+include "koneksi.php";
+$sql = mysqli_query($db, "select max(idtransaksi) as maxID from tb_transaksi");
+$data = mysqli_fetch_array($sql);
+
+$kode = $data['maxID'];
+$kode++;
 ?>
 
 <div id="label-page">
@@ -15,7 +16,7 @@ $id = 'TR' . $num;
       <tr>
         <td class="label-formulir">ID Transaksi</td>
         <td class="isian-formulir"><input type="text" name="id_transaksi" class="isian-formulir isian-formulir-border"
-            value="<?=$id?>" readonly>
+            value="<?=$kode?>" readonly>
         </td>
       </tr>
       <tr>
@@ -25,8 +26,7 @@ $id = 'TR' . $num;
             <option value="" selected disabled> Pilih Data Anggota </option>
             <?php
 						$q_tampil_anggota=mysqli_query($db,
-							"SELECT * FROM tbanggota
-							WHERE status='Tidak Meminjam'
+							"SELECT * FROM tb_anggota
 							ORDER BY idanggota"
 						);
 						while($r_tampil_anggota=mysqli_fetch_array($q_tampil_anggota)){
@@ -43,12 +43,11 @@ $id = 'TR' . $num;
             <option value="" selected disabled> Pilih Data Buku </option>
             <?php
 						$q_tampil_buku=mysqli_query($db,
-							"SELECT * FROM tbbuku
-							WHERE status='Tersedia'
-							ORDER BY idbuku"
+							"SELECT * FROM tb_jenis_pakaian
+							ORDER BY idpakaian"
 						);
 						while($r_tampil_buku=mysqli_fetch_array($q_tampil_buku)){
-							echo"<option value=$r_tampil_buku[idbuku]>$r_tampil_buku[idbuku] | $r_tampil_buku[judulbuku]</option>";
+							echo"<option value=$r_tampil_buku[idpakaian]>$r_tampil_buku[idpakaian] | $r_tampil_buku[nama_pakaian]</option>";
 						}
 					?>
           </select>

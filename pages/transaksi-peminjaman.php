@@ -9,19 +9,18 @@
       <th>ID Transaksi</th>
       <th>ID Anggota</th>
       <th>Nama</th>
-      <th>ID Buku</th>
-      <th>Judul Buku</th>
+      <th>ID Pakaian</th>
+      <th>Nama Pakaian</th>
       <th>Tanggal Pinjam</th>
       <th style="width: 180px;">Opsi</th>
     </tr>
     <?php
 
-		$sql="SELECT tbtransaksi.*,tbanggota.*,tbbuku.*
-		FROM tbtransaksi,tbanggota,tbbuku
-		WHERE tbtransaksi.idanggota=tbanggota.idanggota
-		AND tbtransaksi.idbuku=tbbuku.idbuku
-		AND tbtransaksi.tglkembali='0000-00-00'
-		ORDER BY tbtransaksi.idtransaksi DESC";
+		$sql="SELECT tb_transaksi.*,tb_anggota.*,tb_jenis_pakaian.*
+		FROM tb_transaksi,tb_anggota,tb_jenis_pakaian
+		WHERE tb_transaksi.idanggota=tb_anggota.idanggota
+		AND tb_transaksi.idpakaian=tb_jenis_pakaian.idpakaian
+		ORDER BY tb_transaksi.idtransaksi DESC";
 		
 		$q_transaksi = mysqli_query($db, $sql);
 
@@ -33,8 +32,8 @@
       <td><?php echo $r_transaksi['idtransaksi']; ?></td>
       <td><?php echo $r_transaksi['idanggota']; ?></td>
       <td><?php echo $r_transaksi['nama']; ?></td>
-      <td><?php echo $r_transaksi['idbuku']; ?></td>
-      <td><?php echo $r_transaksi['judulbuku']; ?></td>
+      <td><?php echo $r_transaksi['idpakaian']; ?></td>
+      <td><?php echo $r_transaksi['nama_pakaian']; ?></td>
       <td><?php echo $r_transaksi['tglpinjam']; ?></td>
       <td>
         <div class="tombol-opsi-container"><a
